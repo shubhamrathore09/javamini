@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="p1" class="pack.Person">
+
+<property name="P_id" value="1"></property>
+<property name="P_name" value="shubham"></property>
+<property name="P_age" value="25"></property>
+
+</bean>
+
+
+<bean id="p2" class="pack.Person">
+
+<property name="P_id" value="2"></property>
+<property name="P_name" value="ham"></property>
+<property name="P_age" value="23"></property>
+
+</bean>
+
+
+
+
+
+<bean id="ps" class="pack.PersonService">
+<property name="theList">
+<list>
+<ref bean="p1"/>
+<ref bean="p2"/>
+</list></property>
+</bean>
+
+
+
+</beans>
